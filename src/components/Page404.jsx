@@ -1,11 +1,12 @@
 import useRippleTWE from "../hooks/useRippleTWE";
 import pic1 from "../assets/404_pic.jpg";
 import useRedirect from "../hooks/useRedirect";
+import { repoRoot } from "../../public/repoRoot.js";
 
 export default function Page404() {
   useRippleTWE();
 
-  const handleRedirect = useRedirect("/", 25000);
+  const handleRedirect = useRedirect(repoRoot, 25000);
 
   return (
     <main className="flex min-h-[85vh] items-center justify-center p-6 bg-neutral-50 dark:bg-neutral-900">

@@ -10,16 +10,17 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import ApiKey from "./pages/ApiKey.jsx";
 import Posts from "./pages/Posts.jsx";
 import Page404 from "./components/Page404.jsx";
+import { repoRoot } from "../public/repoRoot.js";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/apikey" element={<ApiKey />} />
-        <Route path="/posts" element={<Posts/>}/>
-        <Route path="*" element={<Page404/>}/>
+        <Route path={repoRoot} element={<Home />} />
+        <Route path={repoRoot + "apikey"} element={<ApiKey />} />
+        <Route path={repoRoot +  "posts"} element={<Posts/>}/>
+        <Route path={repoRoot + "*" } element={<Page404/>}/>
       </Routes>
 
       <Footer />

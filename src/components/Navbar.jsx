@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 import useCollapseTWE from "../hooks/useCollapseTWE.js";
+import { repoRoot } from "../../public/repoRoot.js";
 
 export default function Navbar() {
   const [didMount, setDidMount] = useState(false);
@@ -15,7 +16,9 @@ export default function Navbar() {
       data-twe-navbar-ref>
       <div className="flex w-full flex-wrap items-center justify-between px-3">
         <div className="ms-2">
-          <NavLink className="text-xl text-cyan-200 dark:text-white" to="/">
+          <NavLink
+            className="text-xl text-cyan-200 dark:text-white"
+            to={repoRoot}>
             React Deploy Navbar
           </NavLink>
         </div>
@@ -59,7 +62,7 @@ export default function Navbar() {
               <NavLink
                 className="text-orange-300 font-extrabold dark:text-white lg:px-2"
                 aria-current="page"
-                to="/"
+                to={repoRoot}
                 data-twe-nav-link-ref>
                 Home
               </NavLink>
@@ -70,7 +73,7 @@ export default function Navbar() {
               data-twe-nav-item-ref>
               <NavLink
                 className="p-0 text-orange-300 font-extrabold transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                to="/apikey"
+                to={repoRoot + "apikey"}
                 data-twe-nav-link-ref>
                 API Key
               </NavLink>
@@ -80,7 +83,7 @@ export default function Navbar() {
               data-twe-nav-item-ref>
               <NavLink
                 className="p-0 text-orange-300 font-extrabold transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                to="/posts"
+                to={repoRoot + "posts"}
                 data-twe-nav-link-ref>
                 REST API
               </NavLink>
