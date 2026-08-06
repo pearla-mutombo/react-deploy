@@ -1,5 +1,5 @@
 {
-  "name": "react-template",
+  "name": "react-deploy",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && git add . && git commit -m \"automated deploy\" && git push origin main"
   },
   "dependencies": {
     "react": "^19.2.7",
